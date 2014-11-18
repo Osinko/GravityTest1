@@ -16,6 +16,7 @@ public class Shooter : MonoBehaviour
 
 		void Awake ()
 		{
+	
 				_transform = transform;
 				lineRend = GetComponent<LineRenderer> ();
 				markTransform = (Instantiate (choice, _transform.position, Quaternion.identity) as GameObject).transform;
