@@ -45,7 +45,7 @@ public class Shooter : MonoBehaviour
 				if (Input.GetButtonDown ("Fire1")) {
 						GameObject go = Instantiate (bulletPref, _transform.position, Quaternion.identity) as GameObject;
 						//砲弾発射の初速度（ベクトル）で指定しImpulseで力を加える
-						go.rigidbody.AddForce (cos * speed, sin * speed, 0.0f, ForceMode.Impulse);
+						go.GetComponent<Rigidbody>().AddForce (cos * speed, sin * speed, 0.0f, ForceMode.Impulse);
 						DestroyObject (go, lifeTime);
 				}
 		}
